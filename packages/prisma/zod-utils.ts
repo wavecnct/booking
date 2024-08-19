@@ -495,7 +495,7 @@ export const DeploymentTheme = z
     bookingMedian: z.string().default("#494949"),
     bookingDark: z.string().default("#313131"),
     bookingDarker: z.string().default("#292929"),
-    fontName: z.string().default("Cal Sans"),
+    fontName: z.string().default("DM Sans"),
     fontSrc: z.string().default("https://cal.com/cal.ttf"),
   })
   .optional();
