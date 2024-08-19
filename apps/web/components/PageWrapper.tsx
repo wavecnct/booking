@@ -1,6 +1,5 @@
 import { DefaultSeo } from "next-seo";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { DM_Sans, Inter } from "next/font/google";
 import Head from "next/head";
 import Script from "next/script";
 
@@ -22,13 +21,7 @@ export interface CalPageWrapper {
 }
 
 const interFont = Inter({ subsets: ["latin"], variable: "--font-inter", preload: true, display: "swap" });
-const calFont = localFont({
-  src: "../fonts/CalSans-SemiBold.woff2",
-  variable: "--font-cal",
-  preload: true,
-  display: "swap",
-  weight: "600",
-});
+const calFont = DM_Sans({ subsets: ["latin"], variable: "--font-cal", preload: true, display: "swap" });
 
 function PageWrapper(props: AppProps) {
   const { Component, pageProps, err, router } = props;

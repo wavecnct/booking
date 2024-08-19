@@ -1,7 +1,6 @@
 import { dir } from "i18next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
-import { headers, cookies } from "next/headers";
+import { DM_Sans, Inter } from "next/font/google";
+import { cookies, headers } from "next/headers";
 import React from "react";
 
 import { getLocale } from "@calcom/features/auth/lib/getLocale";
@@ -12,13 +11,7 @@ import { prepareRootMetadata } from "@lib/metadata";
 import "../styles/globals.css";
 
 const interFont = Inter({ subsets: ["latin"], variable: "--font-inter", preload: true, display: "swap" });
-const calFont = localFont({
-  src: "../fonts/CalSans-SemiBold.woff2",
-  variable: "--font-cal",
-  preload: true,
-  display: "block",
-  weight: "600",
-});
+const calFont = DM_Sans({ subsets: ["latin"], variable: "--font-cal", preload: true, display: "swap" });
 
 export const generateMetadata = () =>
   prepareRootMetadata({
